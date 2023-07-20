@@ -16,7 +16,6 @@ spec:
       labels:
         app: fluentd
     spec:
-      activeDeadlineSeconds: 2
       containers:
         - name: fluentd-ds2
           image: fluentd
