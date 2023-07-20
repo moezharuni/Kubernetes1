@@ -8,6 +8,6 @@ spec:
   selector:
     app: jenkins
   ports:
-    - name: lb-svc
+    - name: jenkinsandalpine-rs
       port: 30000
       targetPort: 8080
