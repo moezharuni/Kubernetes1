@@ -12,7 +12,6 @@ spec:
     metadata:
       name: job
     spec:
-      activeDeadlineSeconds: 2
       restartPolicy: OnFailure
       containers:
         - name: job1
