@@ -15,7 +15,6 @@ spec:
       labels:
         app: jenkins
     spec:
-      activeDeadlineSeconds: 2
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts-jdk11
