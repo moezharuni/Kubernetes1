@@ -20,8 +20,3 @@ spec:
           image: jenkins
           ports:
             - containerPort: 8080
-        - name: alpine
-          image: alpine:3
-          command:
-            - sleep
-            - 1d
