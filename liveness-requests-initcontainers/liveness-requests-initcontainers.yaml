@@ -21,10 +21,9 @@ spec:
           ports:
             - containerPort: 80
           livenessProbe:
-            exec:
-              command:
-                - sleep
-                - 5s
+            httpGet:
+              path: /
+              port: 80
           readinessProbe:
             httpGet:
               path: /
