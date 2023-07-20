@@ -9,7 +9,7 @@ spec:
       app: alpine
   template:
     metadata:
-      name: myjob1
+      name: myjob
       labels:
         app: alpine
     spec:
