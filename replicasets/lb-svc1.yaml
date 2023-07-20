@@ -8,6 +8,6 @@ spec:
   selector:
     app: jenkins
   ports:
-    - name: jenkinsandalpine-rs
+    - name: loadbalancer-svc
       port: 80
       targetPort: 8080
