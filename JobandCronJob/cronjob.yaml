@@ -1,0 +1,28 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: PeriodicJob
+  labels:
+    app: alpine3
+    env: prod
+spec:
+  schedule: '* * * * *'
+  jobTemplate:
+    metadata:
+      name: CronJob1
+    spec:
+      activeDeadlineSeconds: 2
+      backoffLimit: 4
+      template:
+        metadata:
+          name: CronJob5
+        spec:
+          activeDeadlineSeconds: 2
+          restartPolicy: OnFailure
+          containers:
+            - name: alpine
+              image: alpine
+              args:
+                - sleep
+                - 5s

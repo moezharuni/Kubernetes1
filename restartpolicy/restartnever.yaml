@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restartnever
+  labels:
+    app: alpine1
+    env: dev
+spec:
+  activeDeadlineSeconds: 2
+  containers:
+    - name: never
+      image: alpine
+      command:
+        - sleep
+        - 5s
+  restartPolicy: Never

@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx-statefulset
+spec:
+  minReadySeconds: 2
+  replicas: 3
+  serviceName: ss-svc
+  selector:
+    matchLabels:
+      name: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        name: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+      volumeMounts:
+        - name: ss-vol
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+    metadata:
+      name: ss-vol
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: "1Gi"
+      storageClassName: managed  
