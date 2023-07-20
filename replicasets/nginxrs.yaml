@@ -18,7 +18,6 @@ spec:
       labels:
         app: nginx
     spec:
-      activeDeadlineSeconds: 2
       containers:
         - name: nginx
           image: nginx
