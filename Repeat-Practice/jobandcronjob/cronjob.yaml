@@ -9,14 +9,9 @@ spec:
     metadata:
       name: mycronjob1
     spec:
-      selector:
-        matchLabels:
-          app: alpine
       template:
         metadata:
           name: alpine
-          labels:
-            app: alpine
         spec:
           restartPolicy: OnFailure
           containers:

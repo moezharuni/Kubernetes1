@@ -4,14 +4,9 @@ kind: Job
 metadata:
   name: myjob
 spec:
-  selector:
-    matchLabels:
-      app: alpine
   template:
     metadata:
       name: myjob
-      labels:
-        app: alpine
     spec:
       restartPolicy: OnFailure
       containers:
