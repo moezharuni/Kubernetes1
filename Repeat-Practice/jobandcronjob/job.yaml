@@ -10,6 +10,8 @@ spec:
   template:
     metadata:
       name: myjob1
+      labels:
+        app: alpine
     spec:
       restartPolicy: OnFailure
       containers:
