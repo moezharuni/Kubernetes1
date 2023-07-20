@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: Job
+  name: job
   labels:
     app: alpine
     env: testing
@@ -10,12 +10,12 @@ spec:
   activeDeadlineSeconds: 5
   template:
     metadata:
-      name: Job
+      name: job
     spec:
       activeDeadlineSeconds: 2
       restartPolicy: OnFailure
       containers:
-        - name: Job1
+        - name: job1
           image: alpine
           args:
             - sleep
