@@ -5,7 +5,7 @@ metadata:
   name: jenkins-rs
 spec:
   minReadySeconds: 5
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: jenkins
@@ -27,4 +27,4 @@ spec:
           readinessProbe:
             httpGet:
               path: /
-              port: 80
+              port: 8080
