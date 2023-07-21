@@ -27,7 +27,7 @@ spec:
           readinessProbe:
             exec:
               command:
-                - pwd
+                - ls
           resources:
             requests:
               memory: "64Mi"
