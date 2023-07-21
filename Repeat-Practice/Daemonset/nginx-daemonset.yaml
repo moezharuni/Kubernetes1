@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nginx-daemonset
+  annotations:
+    kubernetes.io/change-cause: "nginx first daemonset deploy"
 spec:
   selector:
     matchLabels:
