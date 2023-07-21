@@ -27,10 +27,12 @@ spec:
             - containerPort: 80
           livenessProbe:
             exec:
-              command: pwd
+              command:
+                - pwd
           readinessProbe:
             exec:
-              command: pwd
+              command:
+                - pwd
           resources:
             requests:
               memory: "64Mi"
@@ -44,4 +46,3 @@ spec:
           args:
             - sleep
             - 15s
-              
