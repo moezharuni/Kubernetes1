@@ -30,8 +30,8 @@ spec:
                 - pwd
           resources:
             requests:
-              memory: "32Mi"
+              memory: "64Mi"
               cpu: "128m"
             limits:
-              memory: "200Mi"
-              cpu: "300m"
+              memory: "500Mi"
+              cpu: "500m"
