@@ -9,4 +9,4 @@ spec:
     app: jenkins
   ports:
     - port: 32000
-      targetPort: 80
+      targetPort: 8080
