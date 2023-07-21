@@ -25,6 +25,6 @@ spec:
               command:
                 - pwd
           readinessProbe:
-            httpGet:
-              path: /
-              port: 8080
+            exec:
+              command:
+                - pwd
