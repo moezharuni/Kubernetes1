@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deploy
+  annotations:
+    kubernetes.io/change-cause: "rollback to nginx"
 spec:
   minReadySeconds: 2
   replicas: 4
