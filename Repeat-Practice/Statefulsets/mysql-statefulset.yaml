@@ -1,0 +1,44 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql-ss
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: mysql
+  serviceName: headless-svc
+  template:
+    metadata:
+      name: mysql-pod
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql-pod
+          image: mysql:8
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: rootroot
+            - name: MYSQL_DATABASE
+              value: employees
+            - name: MYSQL_USER
+              value: qtdevops
+            - name: MYSQL_PASSWORD
+              value: rootroot
+            - name: myvol
+          volumeMounts:
+            - name: myvol
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:
+    - metadata:
+        name: myvol
+      spec:
+        accessModes: ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: managed
