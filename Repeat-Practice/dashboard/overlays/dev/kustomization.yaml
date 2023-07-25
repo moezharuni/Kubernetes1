@@ -2,4 +2,5 @@
 resources:
   - ../../base
 
+namespace: dev
 namePrefix: dev-
