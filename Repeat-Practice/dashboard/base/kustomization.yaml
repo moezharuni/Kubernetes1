@@ -3,4 +3,3 @@ resources:
   - deployment.yaml
   - hpa.yaml
   - svc.yaml
-  - namespace.yaml
