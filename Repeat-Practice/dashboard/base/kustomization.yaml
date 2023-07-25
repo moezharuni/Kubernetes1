@@ -1,0 +1,6 @@
+---
+resources:
+  - deployment.yaml
+  - hpa.yaml
+  - svc.yaml
+  - Namespace.yaml
