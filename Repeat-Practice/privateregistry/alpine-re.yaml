@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: alpine
-          image: khajaregistry123.azurecr.io/alpine:1.0.0
+          image: khajaregistry123.azurecr.io/alpine:latest
           args:
             - sleep
             - 1d
