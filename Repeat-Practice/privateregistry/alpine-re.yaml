@@ -24,4 +24,4 @@ spec:
             - sleep
             - 1d
       imagePullSecrets:
-        - name: regcred
+        - name: regcredd
