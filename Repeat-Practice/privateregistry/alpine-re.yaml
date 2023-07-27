@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
         - name: alpine
-          image: khajaregistry123.azurecr.io/alpine:latest
-          args:
+          image: khajaregistry123.azurecr.io/alpine1:latest
+          command:
             - sleep
             - 1d
       imagePullSecrets:
