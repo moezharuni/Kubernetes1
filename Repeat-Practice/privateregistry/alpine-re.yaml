@@ -13,7 +13,7 @@ spec:
       app: alpine
   template:
     metadata:
-      name: nginx
+      name: alpine
       labels:
         app: alpine
     spec:
