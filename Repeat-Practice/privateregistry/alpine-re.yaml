@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: alpine-pod
+  labels:
+    name: alpine-pod1
+spec:
+  minReadySeconds: 2
+  replicas: 3
+  selector:
+    matchLabels:
+      app: alpine
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: alpine
+    spec:
+      containers:
+        - name: alpine
+          image: khajaregistry123.azurecr.io/alpine:1.0.0
+          args:
+            - sleep
+            - 1d
+      imagePullSecrets:
+        - name: regcred
