@@ -18,7 +18,7 @@ metadata:
   name: catalog-svc
 spec:
   selector:
-    app: ctlg
+    app: catalog
   type: ClusterIP
   ports:
     - port: 80
@@ -44,7 +44,7 @@ metadata:
   name: identity-svc
 spec:
   selector:
-    app: id
+    app: identity
   type: ClusterIP
   ports:
     - port: 80

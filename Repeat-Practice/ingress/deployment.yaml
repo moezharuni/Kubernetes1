@@ -34,7 +34,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ctlg
+      app: catalog
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -44,7 +44,7 @@ spec:
     metadata:
       name: id-pod2
       labels:
-        app: ctlg
+        app: catalog
     spec:
       containers:
         - name: catalog
@@ -88,7 +88,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: id
+      app: identity
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -98,7 +98,7 @@ spec:
     metadata:
       name: id-pod4
       labels:
-        app: id
+        app: identity
     spec:
       containers:
         - name: identity
