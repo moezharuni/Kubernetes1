@@ -20,7 +20,7 @@ spec:
         app: basket
     spec:
       containers:
-        - name: id-pod
+        - name: basket
           image: shaikkhajaibrahim/dummy-basket-srv:1.0.0
           ports:
             - containerPort: 80
@@ -47,7 +47,7 @@ spec:
         app: ctlg
     spec:
       containers:
-        - name: id-pod
+        - name: catalog
           image: shaikkhajaibrahim/dummy-ctlg-srv:1.0.0
           ports:
             - containerPort: 80
@@ -74,7 +74,7 @@ spec:
         app: order
     spec:
       containers:
-        - name: id-pod
+        - name: order
           image: shaikkhajaibrahim/dummy-ord-srv:1.0.0
           ports:
             - containerPort: 80
@@ -101,7 +101,7 @@ spec:
         app: id
     spec:
       containers:
-        - name: id-pod
+        - name: identity
           image: shaikkhajaibrahim/dummy-id-srv:1.0.0
           ports:
             - containerPort: 80  
