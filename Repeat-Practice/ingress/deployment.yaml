@@ -15,7 +15,7 @@ spec:
       maxUnavailable: 25%
   template:
     metadata:
-      name: id-pod
+      name: id-pod1
       labels:
         app: basket
     spec:
@@ -42,7 +42,7 @@ spec:
       maxUnavailable: 25%
   template:
     metadata:
-      name: id-pod
+      name: id-pod2
       labels:
         app: ctlg
     spec:
@@ -69,7 +69,7 @@ spec:
       maxUnavailable: 25%
   template:
     metadata:
-      name: id-pod
+      name: id-pod3
       labels:
         app: order
     spec:
@@ -96,7 +96,7 @@ spec:
       maxUnavailable: 25%
   template:
     metadata:
-      name: id-pod
+      name: id-pod4
       labels:
         app: id
     spec:
