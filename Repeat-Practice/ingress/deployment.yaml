@@ -1,0 +1,107 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: basket
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: id-pod
+      labels:
+        app: basket
+    spec:
+      containers:
+        name: id-pod
+        image: shaikkhajaibrahim/dummy-basket-srv:1.0.0
+        ports:
+          containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ctlg
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: id-pod
+      labels:
+        app: ctlg
+    spec:
+      containers:
+        name: id-pod
+        image: shaikkhajaibrahim/dummy-ctlg-srv:1.0.0
+        ports:
+          containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: order
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: id-pod
+      labels:
+        app: order
+    spec:
+      containers:
+        name: id-pod
+        image: shaikkhajaibrahim/dummy-ord-srv:1.0.0
+        ports:
+          containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: id
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: id-pod
+      labels:
+        app: id
+    spec:
+      containers:
+        name: id-pod
+        image: shaikkhajaibrahim/dummy-id-srv:1.0.0
+        ports:
+          containerPort: 80  

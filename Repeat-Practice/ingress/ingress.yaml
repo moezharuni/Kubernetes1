@@ -1,0 +1,12 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-controller123
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path:
+            pathType: Prefix
