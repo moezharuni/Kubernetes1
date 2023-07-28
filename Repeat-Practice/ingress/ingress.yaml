@@ -18,21 +18,21 @@ spec:
                 name: basket-svc
                 port:
                   number: 80
-          - path: /basket(/|$)(.*)
+          - path: /catalog(/|$)(.*)
             pathType: Prefix
             backend:
               service:
                 name: catalog-svc
                 port:
                   number: 80
-          - path: /basket(/|$)(.*)
+          - path: /order(/|$)(.*)
             pathType: Prefix
             backend:
               service:
                 name: order-svc
                 port:
                   number: 80
-          - path: /basket(/|$)(.*)
+          - path: /identity(/|$)(.*)
             pathType: Prefix
             backend:
               service:
